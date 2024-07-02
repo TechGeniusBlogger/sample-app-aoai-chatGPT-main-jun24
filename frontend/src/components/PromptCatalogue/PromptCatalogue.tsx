@@ -1,6 +1,10 @@
 import React from 'react';
 
-function PromptCatalogue({ onPromptSelected }) {
+interface PromptCatalogueProps {
+  onPromptSelected: (prompt: string) => void;
+}
+
+const PromptCatalogue: React.FC<PromptCatalogueProps> = ({ onPromptSelected }) => {
   // Example prompts, this could be fetched from an API or defined elsewhere
   const prompts = [
     "How to apply for car parking",
@@ -8,7 +12,7 @@ function PromptCatalogue({ onPromptSelected }) {
     "Conflicts of Interest Policy"
   ];
 
-  const handlePromptClick = (prompt) => {
+  const handlePromptClick = (prompt: string) => {
     // Call the onPromptSelected callback with the selected prompt
     onPromptSelected(prompt);
   };
