@@ -18,6 +18,11 @@ const Layout = () => {
     const [showHistoryLabel, setShowHistoryLabel] = useState<string>("Show chat history");
     const appStateContext = useContext(AppStateContext)
     const ui = appStateContext?.state.frontendSettings?.ui;
+    const [selectedPrompt, setSelectedPrompt] = useState<string | null>(null);
+
+  const handlePromptSelected = (prompt: string) => {
+    setSelectedPrompt(prompt);
+};
 
     const handleShareClick = () => {
         setIsSharePanelOpen(true);
@@ -92,7 +97,7 @@ const Layout = () => {
             <Outlet />
             <div>
                 <h1>Sample Prompts</h1>
-                <PromptCatalogue />
+                <PromptCatalogue onPromptSelected={handlePromptSelected} />
             </div>
             <Dialog
                 onDismiss={handleSharePanelDismiss}
