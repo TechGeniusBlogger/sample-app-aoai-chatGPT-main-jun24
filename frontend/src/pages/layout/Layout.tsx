@@ -133,6 +133,5 @@ const Layout = () => {
                     </Stack>
         </Dialog>
  </div>
-};
-
+    );
 export default Layout;
