@@ -96,7 +96,7 @@ const Layout = () => {
             </header>
             <Outlet />
             <div>
-                <h1>Sample Prompts</h1>
+                {/* <h1>Sample Prompts</h1> */}
                 <PromptCatalogue onPromptSelected={handlePromptSelected} />
             </div>
             <Dialog
