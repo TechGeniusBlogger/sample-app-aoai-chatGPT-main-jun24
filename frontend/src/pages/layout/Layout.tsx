@@ -7,7 +7,7 @@ import { useContext, useEffect, useState } from "react";
 import { HistoryButton, ShareButton } from "../../components/common/Button";
 import { AppStateContext } from "../../state/AppProvider";
 import { CosmosDBStatus } from "../../api";
-import {PromptCatalogue } from "../../components/PromptCatalogue";
+import PromptCatalogue from "../../components/PromptCatalogue/PromptCatalogue";
 
 const Layout = () => {
     const [isSharePanelOpen, setIsSharePanelOpen] = useState<boolean>(false);
