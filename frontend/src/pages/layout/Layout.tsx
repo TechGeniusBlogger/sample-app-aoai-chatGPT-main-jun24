@@ -91,9 +91,9 @@ const Layout = () => {
             </header>
             <Outlet />
             <div>
-            <h1>Sample Prompts</h1>
-            <PromptCatalogue />
-        </div>
+                <h1>Sample Prompts</h1>
+                <PromptCatalogue />
+            </div>
             <Dialog
                 onDismiss={handleSharePanelDismiss}
                 hidden={!isSharePanelOpen}
@@ -130,7 +130,9 @@ const Layout = () => {
                         <CopyRegular className={styles.copyButton} />
                         <span className={styles.copyButtonText}>{copyText}</span>
                     </div>
-                    
+                    </Stack>
+        </Dialog>
+ </div>
 };
 
 export default Layout;
