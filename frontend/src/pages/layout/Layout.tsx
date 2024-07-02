@@ -73,6 +73,10 @@ const Layout = () => {
     return (
         <div className={styles.layout}>
             <header className={styles.header} role={"banner"}>
+            <div>
+                {/* <h1>Sample Prompts</h1> */}
+                <PromptCatalogue onPromptSelected={handlePromptSelected} />
+            </div>
                 <Stack horizontal verticalAlign="center" horizontalAlign="space-between">
                     <Stack horizontal verticalAlign="center">
                         <img
@@ -95,10 +99,10 @@ const Layout = () => {
                 </Stack>
             </header>
             <Outlet />
-            <div>
+            {/* <div>
                 {/* <h1>Sample Prompts</h1> */}
-                <PromptCatalogue onPromptSelected={handlePromptSelected} />
-            </div>
+                {/* <PromptCatalogue onPromptSelected={handlePromptSelected} /> */}
+            {/* </div> */} */}
             <Dialog
                 onDismiss={handleSharePanelDismiss}
                 hidden={!isSharePanelOpen}
