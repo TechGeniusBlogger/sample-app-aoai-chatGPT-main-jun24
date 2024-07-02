@@ -99,10 +99,6 @@ const Layout = () => {
                 </Stack>
             </header>
             <Outlet />
-            {/* <div>
-                {/* <h1>Sample Prompts</h1> */}
-                {/* <PromptCatalogue onPromptSelected={handlePromptSelected} /> */}
-            {/* </div> */} */}
             <Dialog
                 onDismiss={handleSharePanelDismiss}
                 hidden={!isSharePanelOpen}
