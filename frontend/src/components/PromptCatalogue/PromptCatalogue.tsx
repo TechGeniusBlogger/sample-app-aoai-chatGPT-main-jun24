@@ -1,21 +1,30 @@
 import React from 'react';
 
-function PromptCatalogue() {
+function PromptCatalogue({ onPromptSelected }) {
   // Example prompts, this could be fetched from an API or defined elsewhere
   const prompts = [
-    "Create a React component",
-    "Build a todo list application",
-    "Design a prompt catalogue"
+    "How to apply for car parking",
+    "explain about whistleblower",
+    "Conflicts of Interest Policy"
   ];
+
+  const handlePromptClick = (prompt) => {
+    // Call the onPromptSelected callback with the selected prompt
+    onPromptSelected(prompt);
+  };
 
   return (
     <div>
-      <h2>Prompt Catalogue</h2>
-      <ul>
-        {prompts.map((prompt, index) => (
-          <li key={index}>{prompt}</li>
-        ))}
-      </ul>
+      <h2>Prompt Examples</h2>
+      {prompts.map((prompt, index) => (
+        <div 
+          key={index} 
+          onClick={() => handlePromptClick(prompt)}
+          style={{ border: '1px solid black', margin: '10px', padding: '10px', cursor: 'pointer' }}
+        >
+          {prompt}
+        </div>
+      ))}
     </div>
   );
 }
